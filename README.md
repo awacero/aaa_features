@@ -28,9 +28,11 @@ Create and activate your working environment (in a terminal session):
 
 # Clone the repository and install 
 
-`git clone https://github.com/awacero/aaa_features.git`
-`cd aaa_features`
-`pip install .`
+`git clone https://github.com/awacero/aaa_features.git` 
+
+`cd aaa_features` 
+
+`pip install .` 
 
 
 # Install the package aaa_features from PYPI:
