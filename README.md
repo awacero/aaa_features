@@ -13,117 +13,29 @@ and the original paper for which the code was developped should be cited:  
 
 We thank you for the respect of the authors work.
 
-## [MAJ 9-10-2018]
-Files to run an example of continuous analysis have been added. 
-Run analysis of type 1 (the automatic classification of continuous signals, stored in recording files) with config file newsettings_1EXAMPLE.json. 
-Simply adjust the path in the configuration file to your own machine (general/newsettings_1EXAMPLE.json and specific/usecase1_EXAMPLE.json) and run playground 1. 
-
-NB: The data is over-simplistic, and the labeling is random (catalogue.txt file). Play with it and the other settings to make it work ! :) 
-
-
-## What is this code for?
-
-This code answers three different purposes:
-
-1. The automatic classification of continuous signals, stored in recording files (.wav, .sac, etc)
-2. The automatic classification of discrete (sparse) events, stored as numpy.array objects. 
-3. The automatic classification of discrete (sparse) events, with real time conditions and data requests. 
-
-The roadmap to help you chose a usecase is simple:  
-
-- If your data are continuous recordings in which you want to detect and classify certain classes of event, go for Usecase 1. 
-- If your data are already detected events that you want to classify, you have one more question to answer. 
-	- Are you data stored in recordings ? If so, read and shape your data in numpy.array format and go for Usecase 2. 
-	- If you are dealing with real time data request, then go for Usecase 3. 
-
 ## Set up and requierements needed to run the code
 This code was developed under Python 3, and needs the following libraries. Those libraries need to be previously installed.
 
-- `numpy==1.13.3`
-- `scipy==0.18.1`
-- `pandas==0.19.2`
-- `matplotlib==1.5.3`
-- `numpy`
-- `obspy==1.0.2`
-- `python_speech_features==0.4`
-- `sympy==1.0`
-- `soundfile==0.8.1`
-- `scikit-learn==0.18.1`
+- `obspy==1.1`
+- `python_speech_features`
+- `sympy`
 
-To install the correct version of python, along with the library, you can use miniconda environment manager. 
 
-1- Download and install miniconda: `https://conda.io/miniconda.html` 
-NB: By installing miniconda, your `.bachrc` will be modified with the following line : 
+Create and activate your working environment (in a terminal session):  
+`conda create -n aaa_features python=3.9`  
+`conda activate aaa_features`
 
-> 	added by Anaconda3 4.3.0 installer  
->	export PATH="/home/user/anaconda3/bin:$PATH"
+Install the library aaa_features
+`pip install aaa_features`  
 
-We suggest you replace them by 
->	"$PATH:/home/user/anaconda3/bin"
 
-It will leave your computer configuration unchanged (in particular, your previous versions of python will still be used)
-
-2- Create and activate your working environment (in a terminal session):  
-`conda create -n AAA python=3.6`  
-`source activate myEnvName`
-
-3- Install the libraries:  
-`pip install --upgrade pip`  
-`pip install -r AAA_requierements.txt`. 
-
-4- Run the code (see next section)
-
-5- Quit the working environment:  
-`source deactivate` 
+Run the code (see next section)
 
 
 
-## How to run the code?
-
-Each usecase can be run from two different ways, depending on your preferences and what you intend to do with this code.
-
-##### Option 1
-Either using a bash script and path to settings files as input arguments. Bash scripts will run the appropriate Python scripts and properly save and display results. This method is 'the official one'. In your favorite terminal window, start by moving to the `automatic_processing` folder using `cd` command. Then run one of the usecase makefile as follow:
-
-		bash make_usecase1.sh setting_file action verbatim
-	or 
-		
-		bash make_usecase2.sh setting_file verbatim
-	or
-		
-		bash make_usecase3.sh setting_file action verbatim
-		
-setting\_file are stored in the configuration folder and contain all settings needed to run an analysis. Depending on the usecase you have choosen, the information requested in setting_files can change. Please refer yourself to the setting\_file sections for more details.	
-		
-##### Option 2
-Either by using Python playgrounds scripts, if you need a playground where to experiment. Those script are easily found, they all are called something like `PLAYGROUND_USECASE1.py` or similarly. Path to settings and input arguments are 'hard coded' at the beginning of each playground file. To run on of those scripts, simply go to the `automatic_processing` folder and run one on the following commands: 
-
-		python3 PLAYGROUND_something_something.py 
-		
-
-Both configurations are basically going torward the same analysis but you might prefer one or the other depending on what you want to do. 
 
 
-##### More detail on the input arguments 
-
-- `setting_file`: path to the setting file. Traditionnaly, setting file are stored in the `config` folder. The next section gives details on the formatting of configuration files. 
-
-- `verbatim`: 
-	- 0 - quiet
-	- 1 - some information regarding general steps
-	- 2 - more detailed information
-	- 3 - all details
-
-	
-- `action`: 
-	- training to train and save a model 
-	- analyzing to run the analysis 
-	- make_decision to make decision from the output probabilities output from the analysis
-	- display if it is of interest to you.  
-	
-Obviously, the various actions should be run in the order ... analysis cannot be run withour a trained model. 
-
-When running the code for a new application, a specific folder is created for all results. 
+ 
 
 
 ## Configuration files 
