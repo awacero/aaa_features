@@ -29,31 +29,16 @@ Install the library aaa_features
 `pip install aaa_features`  
 
 
-Run the code (see next section)
-
-
-
-
-
- 
-
-
 ## Configuration files 
 	 	
-All the settings related to a new project or a new run are indicated in a setting main setting. 
+- the feature setting file, contained in `config_sample/features*.json` 
 
-It contains information regarding the project paths, the considered application, the signals preprocessing, the features used (linked to a dedicated feature configuration file), and the learning algorithms. 
+## MSEED data sample
+- the folder data_sample contains a MSEED file from the station EC RETU SHZ 2012-06-28
 
-Extra information regarding the wanted analysis, the data to analyze and display parameters are indicated in a separate configuration file, which format depends on the usecase. 
+## Run the code to get the features
 
-So, for each configuration, 3 configuration files are considered:
-
-- the general setting file, contained in `config/general` folder
-- the feature setting file, contained in `config/specific/features` folder
-- the configuration file specific to the wanted analysis, contained in `config/specific/usecaseXX/`
-
-Commented examples for each of the setting files are available (but keep in mind that json files do not support comments, so those files are simply there as examples.)
-
+`python call_aaa_features.py`
 
 ## More info	
 
