@@ -1,3 +1,7 @@
+## NOTE: This code is a extract from https://github.com/malfante/AAA. 
+This code calculates the feature vector from a MSEED file to used it later for training and classification purposes. 
+
+
 # Automatic Analysis Architecture 
 
 Welcome to this automatic classification scheme! Please carefully read the following before asking questions :)
