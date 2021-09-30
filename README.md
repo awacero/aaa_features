@@ -26,14 +26,14 @@ Create and activate your working environment (in a terminal session):
 `conda create -n aaa_features python=3.9`  
 `conda activate aaa_features`
 
-#Clone the repository and install 
+# Clone the repository and install 
 
 `git clone https://github.com/awacero/aaa_features.git`
 `cd aaa_features`
 `pip install .`
 
 
-#Install the package aaa_features from PYPI:
+# Install the package aaa_features from PYPI:
 
 `pip install aaa_features`  
 
