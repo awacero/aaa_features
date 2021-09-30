@@ -14,18 +14,20 @@ and the original paper for which the code was developped should be cited:  
 We thank you for the respect of the authors work.
 
 ## Set up and requierements needed to run the code
-This code was developed under Python 3, and needs the following libraries. Those libraries need to be previously installed.
+This code was developed under Python 3, and needs the following libraries. .
 
-- `obspy==1.1`
+- `obspy>=1.1`
 - `python_speech_features`
 - `sympy`
 
 
 Create and activate your working environment (in a terminal session):  
+
 `conda create -n aaa_features python=3.9`  
 `conda activate aaa_features`
 
-Install the library aaa_features
+Install the package aaa_features:
+
 `pip install aaa_features`  
 
 
