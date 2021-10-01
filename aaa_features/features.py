@@ -35,10 +35,9 @@
 #
 # The fact that you are presently reading this means that you have had
 # knowledge of the CeCILL
-
-
-from featuresFunctions import *
-from tools import bestFFTlength
+import aaa_features
+from aaa_features.featuresFunctions import *
+from aaa_features.tools import bestFFTlength
 import json
 
 

@@ -1,8 +1,6 @@
 
 from obspy import read
-import sys
-sys.path.append("./aaa_features")
-from features import FeatureVector
+from aaa_features.features import FeatureVector
 
 data_mseed=read("./data_sample/EC.RETU..SHZ.2012.06.28.185423.mseed")
 data = data_mseed[0].data
